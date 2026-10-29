@@ -48,7 +48,7 @@ The width file is the **analysis subset**. It keeps only sites in the Boreal Nat
 ### 1. `Species_Abundance_Matrix`: bird counts at every site
 - **Size:** 3,358 rows × 128 columns. One row per site.
 - **Columns:** `location` (site ID), `latitude`, `longitude` (decimal degrees), `project` (survey type and period), followed by **124 four-letter species codes** in columns 5–128.
-- **Values:** whole-number abundance of each species at the site, from 0 to 10. ⚠️ Confirm whether this is the maximum count per visit or the total across visits, and how many visits or recordings each site had.
+- **Values:** **relative abundance**, the number of unique individuals of each species detected at the site (whole numbers, 0–10).
 - **Sample:** `2021_23_Mobile` 2,772 · `2021_23_ARU` 307 · `2024_Mobile` 236 · `2024_ARU` 43. On average 7 species are detected per site, and 14 sites have no detections. The most abundant species are WTSP, TEWA, SWTH, YRWA, AMRO, OVEN, REVI and CHSP.
 
 ### 2. `SelectedSites_BorealNaturalRegion_Width`: boreal sites with line width
@@ -90,7 +90,17 @@ The width file is the **analysis subset**. It keeps only sites in the Boreal Nat
 - The abundance matrix has **9 sites with missing coordinates**: BU21-10-11, P-E0-3-21, P-E0-M177, S-E0-M220, BUM-23-863, BUM-23-864, BUM-23-874, BUM-23-886 and BUM-23-888.
 - Site **BUM-23-1003** has a **positive longitude** (111.01). It is almost certainly −111.01.
 - Species codes follow the standard four-letter alpha codes (e.g. WTSP = White-throated Sparrow). `metadata/species_codes.csv` lists all 124 codes.
-- Site ID prefixes (BUM, BBS, P, S, R, PM, SM, …) identify the original sampling programs. ⚠️ Their meanings are to be documented.
+- **Site ID prefixes** identify the sampling program and feature type:
+
+  | Prefix | Meaning | Survey type | Sites |
+  |---|---|---|---|
+  | `BUM` | BU mobile surveys | Mobile | 2,825 |
+  | `BU` | Bioacoustic Unit | ARU | 1 |
+  | `P` | Pipeline | ARU | 134 |
+  | `S` | Seismic line | ARU | 135 |
+  | `R` | Road | ARU | 37 |
+  | `BBS` | ⚠️ To confirm (sites such as `BBS-4116-1`) | Mobile | 183 |
+  | `PM`, `SM`, `W` | ⚠️ To confirm (2024 ARU sites, e.g. `PM-24-E0-500`, `SM-24-E0-500`, `W-24-E0-503`) | ARU | 30, 12, 1 |
 
 ## Methods (summary)
 
