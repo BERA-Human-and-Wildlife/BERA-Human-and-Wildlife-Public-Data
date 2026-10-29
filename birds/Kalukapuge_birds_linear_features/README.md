@@ -90,7 +90,7 @@ The width file is the **analysis subset**. It keeps only sites in the Boreal Nat
 - The abundance matrix has **9 sites with missing coordinates**: BU21-10-11, P-E0-3-21, P-E0-M177, S-E0-M220, BUM-23-863, BUM-23-864, BUM-23-874, BUM-23-886 and BUM-23-888.
 - Site **BUM-23-1003** has a **positive longitude** (111.01). It is almost certainly −111.01.
 - Species codes follow the standard four-letter alpha codes (e.g. WTSP = White-throated Sparrow). `metadata/species_codes.csv` lists all 124 codes.
-- **Site ID prefixes** identify the sampling program and feature type:
+- **Site ID prefixes** identify the sampling program and feature type. The survey type comes from the `project` column (`*_Mobile` = mobile survey point, `*_ARU` = stationary ARU):
 
   | Prefix | Meaning | Survey type | Sites |
   |---|---|---|---|
@@ -99,8 +99,9 @@ The width file is the **analysis subset**. It keeps only sites in the Boreal Nat
   | `P` | Pipeline | ARU | 134 |
   | `S` | Seismic line | ARU | 135 |
   | `R` | Road | ARU | 37 |
-  | `BBS` | ⚠️ To confirm (sites such as `BBS-4116-1`) | Mobile | 183 |
-  | `PM`, `SM`, `W` | ⚠️ To confirm (2024 ARU sites, e.g. `PM-24-E0-500`, `SM-24-E0-500`, `W-24-E0-503`) | ARU | 30, 12, 1 |
+  | `BBS` | Breeding Bird Survey | Mobile | 183 |
+  | `W` | Wellpad | ARU | 1 |
+  | `PM`, `SM` | ⚠️ To confirm (2024 ARU sites, e.g. `PM-24-E0-500`, `SM-24-E0-500`) | ARU | 30, 12 |
 
 ## Methods (summary)
 
