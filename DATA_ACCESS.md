@@ -4,8 +4,8 @@
 
 | Level | What it means | Datasets |
 |---|---|---|
-| ✅ **Open** | The data, code and documentation are in this repository. Anyone can use them under the stated licence. | `small_mammals/Franceschini_linear_feature_width/` |
-| 🔒 **On request (until published)** | Only the description is public. The data become open once the study is published. | `human_use/Saini_OHV_seismic_lines/`, `small_mammals/Franceschini_seismic_line_restoration/` |
+| ✅ **Open** | The data, code and documentation are in this repository. Anyone can use them under the stated licence. | `small_mammals/Franceschini_linear_feature_width/`, `small_mammals/Franceschini_seismic_line_recovery/` |
+| 🔒 **On request (until published)** | Only the description is public. The data become open once the study is published. | `human_use/Saini_OHV_seismic_lines/` |
 | 🔒 **On request** | Only the description is public. Access needs the data owner's approval. | `birds/Kalukapuge_birds_linear_features/` |
 
 ## How to request access

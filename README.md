@@ -11,7 +11,7 @@ Every dataset is described here, organised by thematic area. **Open** datasets a
 | [Human use](human_use/) | [OHV use on seismic lines](human_use/Saini_OHV_seismic_lines/) – Apoorv Saini | 2021–2024 | 🔒 On request (until published) |
 | [Birds](birds/) | [Bird communities on linear features](birds/Kalukapuge_birds_linear_features/) – Tharindu Kalukapuge | 2021–2024 | 🔒 On request |
 | [Small mammals](small_mammals/) | [Linear feature width and small mammal communities](small_mammals/Franceschini_linear_feature_width/) – Alessandro Franceschini | 2023 | ✅ **Open** – data, code and paper ([doi:10.1139/cjz-2025-0078](https://doi.org/10.1139/cjz-2025-0078)) |
-| [Small mammals](small_mammals/) | [Seismic line regeneration and small mammals](small_mammals/Franceschini_seismic_line_restoration/) – Alessandro Franceschini | 2023–2024 | 🔒 On request (until published) |
+| [Small mammals](small_mammals/) | [Vegetation recovery on seismic lines and small mammals](small_mammals/Franceschini_seismic_line_recovery/) – Alessandro Franceschini | 2023 | ✅ **Open** – data and code ([doi:10.1093/jmammal/gyag073](https://doi.org/10.1093/jmammal/gyag073)) |
 
 ## Repository structure
 
@@ -24,7 +24,7 @@ Every dataset is described here, organised by thematic area. **Open** datasets a
 │   └── Kalukapuge_birds_linear_features/         README only
 └── small_mammals/
     ├── Franceschini_linear_feature_width/        README, docs/, data/, results/, scripts/, LICENSE
-    └── Franceschini_seismic_line_restoration/    README only
+    └── Franceschini_seismic_line_recovery/       README, data/, scripts/, LICENSE
 ```
 
 Each project folder has a `README.md` that explains the study, how the data were collected, the files, and what each column means. In open projects, `data/analysis/` holds the model-ready datasets.
@@ -40,7 +40,7 @@ Requests are forwarded to each dataset's owner for approval. See [DATA_ACCESS.md
 
 ## Licence and citation
 
-- **Open datasets** are released under the licence given in their folder. The linear-feature-width data and code are under **CC BY 4.0**.
+- **Open datasets** are released under the licence given in their folder: **CC BY 4.0** for the linear-feature-width data and **CC BY-NC 4.0** for the seismic-line-recovery data.
 - **Please cite** the publication listed in each project's README, and acknowledge BERA – Boreal Ecosystem Recovery and Assessment.
 
 ## Contact
