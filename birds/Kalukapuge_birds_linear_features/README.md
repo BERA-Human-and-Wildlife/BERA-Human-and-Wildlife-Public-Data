@@ -6,7 +6,7 @@
 **Region:** Alberta, Canada. All sites span about 49.0–59.6 °N and 110.2–120.6 °W; the boreal subset spans about 54.4–59.6 °N and 110.2–119.4 °W.
 
 > 🔒 **Data available on request.** These data are internal to the BERA Human and Wildlife Team. Access needs the data owner's approval. The data files are not in this public repository. This README describes the data so you can decide whether you need it.
-> **To request access:** email **afrances@ualberta.ca** with your name, affiliation, the dataset you need (`birds/Kalukapuge_birds_linear_features`), and how you plan to use it. See [DATA_ACCESS.md](../../DATA_ACCESS.md).
+> **To request access:** email **afrances@ualberta.ca** with your name, affiliation, the dataset you need (`birds/Kalukapuge_birds_linear_features`), and how you plan to use it. Access is subject to the [Terms of Use](../../TERMS_OF_USE.md). See [DATA_ACCESS.md](../../DATA_ACCESS.md).
 
 ## About the project
 

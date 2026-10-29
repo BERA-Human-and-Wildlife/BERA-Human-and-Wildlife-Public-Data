@@ -18,6 +18,7 @@ Every dataset is described here, organised by thematic area. **Open** datasets a
 ```
 ├── README.md                  ← this file
 ├── DATA_ACCESS.md             ← how to request on-request datasets
+├── TERMS_OF_USE.md            ← conditions for using on-request datasets
 ├── human_use/
 │   └── Saini_OHV_seismic_lines/                  README only
 ├── birds/
@@ -36,11 +37,12 @@ Email **afrances@ualberta.ca** with:
 - the dataset(s) you are requesting (use the folder path);
 - a short description of how you plan to use the data.
 
-Requests are forwarded to each dataset's owner for approval. See [DATA_ACCESS.md](DATA_ACCESS.md) for details.
+Requests are forwarded to each dataset's owner for approval. Approved users must accept the [Terms of Use](TERMS_OF_USE.md). See [DATA_ACCESS.md](DATA_ACCESS.md) for details.
 
 ## Licence and citation
 
 - **Open datasets** are released under the licence given in their folder: **CC BY 4.0** for the linear-feature-width data and **CC BY-NC 4.0** for the seismic-line-recovery data.
+- **On-request datasets** are not openly licensed. They are shared under the [Terms of Use](TERMS_OF_USE.md).
 - **Please cite** the publication listed in each project's README, and acknowledge BERA – Boreal Ecosystem Recovery and Assessment.
 
 ## Contact

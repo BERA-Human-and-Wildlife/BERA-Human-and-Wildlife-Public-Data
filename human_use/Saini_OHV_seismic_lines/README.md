@@ -6,7 +6,7 @@
 **Region:** Northeastern Alberta, Canada (about 54.7–57.7 °N, 110.2–112.8 °W)
 
 > 🔒 **Data available on request.** These data are restricted until they are published. The data files are not in this public repository. This README describes the data so you can decide whether you need it.
-> **To request access:** email **afrances@ualberta.ca** with your name, affiliation, the dataset you need (`human_use/Saini_OHV_seismic_lines`), and how you plan to use it. See [DATA_ACCESS.md](../../DATA_ACCESS.md).
+> **To request access:** email **afrances@ualberta.ca** with your name, affiliation, the dataset you need (`human_use/Saini_OHV_seismic_lines`), and how you plan to use it. Access is subject to the [Terms of Use](../../TERMS_OF_USE.md). See [DATA_ACCESS.md](../../DATA_ACCESS.md).
 
 ## About the project
 
