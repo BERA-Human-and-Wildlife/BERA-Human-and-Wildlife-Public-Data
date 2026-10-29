@@ -20,5 +20,5 @@ Email **afrances@ualberta.ca** with the subject line **"BERA data request – <d
 ## What happens next
 
 1. Your request is passed to the owner of the dataset.
-2. If it is approved, you are invited to the private data repository on GitHub. You need a GitHub account; a free one is fine. Accept the invitation within 7 days.
+2. If it is approved, you are invited to the private data repository on GitHub (`BERA-Human-and-Wildlife-Data-Restricted`). You need a GitHub account; a free one is fine. Accept the invitation within 7 days.
 3. Approved data are shared for the purpose stated in your request. Do not redistribute them. Cite the project as given in its README, and discuss co-authorship with the data owner where appropriate.
