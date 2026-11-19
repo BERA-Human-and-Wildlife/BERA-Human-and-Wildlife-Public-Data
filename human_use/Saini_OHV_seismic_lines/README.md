@@ -10,12 +10,12 @@
 
 ## About the project
 
-This project examines how the features of seismic lines and other linear disturbances, along with their surroundings, affect off-highway vehicle (OHV) use along those lines. Each location has an OHV use level (`level`: Low / High). It is paired with:
+This project examines how the features of seismic lines and other linear disturbances, along with their surroundings, affect off-highway vehicle (OHV) use along those lines. Each location has an OHV damage level (`level`: Low / High), assessed in the field. It is paired with:
 
 - **Line attributes:** the type of linear feature and its land type (upland or lowland).
 - **Accessibility:** distance to roads and road type, staging areas, campgrounds and residential areas.
 - **Industrial footprint:** distance to mines, industrial facilities, and active and abandoned wells.
-- **Terrain and vegetation:** elevation, slope, topographic wetness index (TWI), NDVI and NDWI.
+- **Terrain and moisture:** elevation, slope and NDWI (Normalized Difference Water Index).
 
 ## Folder contents
 
@@ -31,7 +31,7 @@ Saini_OHV_seismic_lines/
 ## The dataset: `data/Saini_BERA_OHV.csv`
 
 - **Format:** comma-separated values, with a header row, UTF-8 encoding and no missing values.
-- **Size:** 1,088 rows × 27 columns (about 220 KB).
+- **Size:** 1,088 rows × 24 columns (about 200 KB).
 - **Unit of observation:** one row per surveyed location on a linear feature. Each location has a unique ID in the `location` column.
 
 ### Sample summary
@@ -48,13 +48,12 @@ Saini_OHV_seismic_lines/
 
 | Column | Description | Units / values |
 |---|---|---|
-| `FCODE` | Site/survey program code that groups locations (BU, BUM, HUM, SM, ML, WOOD, EDGEPIPE, EDGESEIS, EDGESEISMIC) ⚠️ | category |
 | `year` | Survey year | 2021–2024 |
 | `latitude`, `longitude` | Location coordinates | decimal degrees (WGS84) |
 | `location` | Unique location ID | text |
 | `type` | Type of linear feature | `seismicline`, `pipeline`, `powerline` |
-| `level` | OHV use level at the location (the response variable) | `Low`, `High` |
-| `easting`, `northing` | Projected coordinates | m, UTM Zone 12N ⚠️ |
+| `level` | OHV damage level at the location (the response variable; see Methods) | `Low`, `High` |
+| `easting`, `northing` | Projected coordinates | m, NAD83 / UTM Zone 12N (EPSG:26912) |
 | `waterbodies.km` | Distance to the nearest waterbody | km |
 | `roads.km` | Distance to the nearest road | km |
 | `roadtype` | Type of the nearest road | `MINOR`, `GRAVEL`, `PAVED` |
@@ -68,17 +67,23 @@ Saini_OHV_seismic_lines/
 | `stagingarea.km` | Distance to the nearest OHV staging area | km |
 | `TWP` | Alberta Township System township number | 65–100 |
 | `elevation` | Elevation | m a.s.l. |
-| `slope` | Terrain slope | degrees ⚠️ |
-| `TWI` | Topographic Wetness Index | unitless |
+| `slope` | Terrain slope | degrees |
 | `landtype` | Land type | `Upland`, `Lowland` |
-| `ndvi` | Normalized Difference Vegetation Index | −1 to 1 |
-| `ndwi` | Normalized Difference Water Index | −1 to 1 |
-
-⚠️ = **to be confirmed by the data owner.** The data dictionary entries for these columns still need checking. They include the meaning of each `FCODE` value; the coordinate datum (NAD83 or WGS84) for the UTM 12N coordinates; whether slope is in degrees or percent; how OHV use was measured and where the Low/High threshold sits; and the source and acquisition date of the NDVI and NDWI imagery.
+| `ndwi` | Normalized Difference Water Index, mean within a 3 m buffer of the point (see Methods) | −1 to 1 |
 
 ## Methods (summary)
 
-*To be completed by Apoorv Saini.* Please cover how OHV use was surveyed (e.g. field assessment of track presence, trail cameras), how `level` was assigned, which spatial layers the distance variables came from (e.g. ABMI Human Footprint Inventory, AltaLIS), and which DEM and imagery were used.
+**OHV damage level (`level`).** Visible OHV-related damage was assessed by walking approximately 50 m along each linear feature:
+- **Low:** no visible damage, or signs of past activity without deep ruts or vegetation damage;
+- **High:** substantial evidence of motorized activity, including deep ruts or dead and flattened vegetation.
+
+**NDWI.** Calculated in Google Earth Engine from Sentinel-2 surface reflectance imagery, May–August 2021–2024, using scenes with less than 10 % cloud cover. Mean values were extracted within 3 m buffers around the sampling points.
+
+**Coordinates.** `latitude`/`longitude` are decimal degrees. `easting`/`northing` are NAD83 / UTM Zone 12N (EPSG:26912).
+
+**Slope** is in degrees.
+
+⚠️ *Still to add by Apoorv Saini:* the spatial layers used for the distance variables (e.g. ABMI Human Footprint Inventory, AltaLIS) and the DEM used for elevation and slope.
 
 ## Citation
 
